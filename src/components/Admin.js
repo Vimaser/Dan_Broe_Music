@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getAuth, signOut, updateEmail, updatePassword } from "firebase/auth";
+import { getAuth, signOut } from "firebase/auth";
 import {
   getFirestore,
   collection,
