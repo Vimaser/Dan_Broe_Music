@@ -1,0 +1,10 @@
+export { default as Contact } from "./Contact";
+export { default as About } from "./About";
+export { default as Gallery } from "./Gallery";
+export { default as Music } from "./Music";
+export { default as Home } from "./Home";
+export { default as Header } from "./Header";
+export { default as Admin } from "./Admin";
+export { default as Login } from "./Login";
+export { default as Footer } from "./Footer";
+export { default as Events } from "./Events";

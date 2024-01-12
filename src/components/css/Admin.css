@@ -1,0 +1,94 @@
+/* Admin.css */
+
+/* Base styles for the entire admin container */
+.admin-container {
+    color: #ccc;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header styles */
+  .admin-container h1 {
+    color: #ccc;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Warning text styles */
+  .warning-text {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Button styles */
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Form input styles */
+  input[type="text"],
+  input[type="date"],
+  textarea {
+    color: #fff; 
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #333;
+  }
+  
+  /* Event form label styles */
+  form label {
+    color: #ccc;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Gallery image styles */
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  /* Message styles */
+  .message {
+    color: #ccc;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  /* Music form styles */
+  .music-form {
+    color: #ccc;
+    margin-top: 20px;
+  }
+  
+  /* Additional section styles */
+  .section {
+    color: #ccc;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
+  
+  /* Styling for delete buttons */
+  button.delete-button {
+    background-color: #ff0000;
+  }
+  
+  button.delete-button:hover {
+    background-color: #cc0000;
+  }
+  

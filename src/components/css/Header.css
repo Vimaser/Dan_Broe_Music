@@ -1,0 +1,71 @@
+/* Header.css */
+
+/* Default light mode styles */
+nav {
+    position: sticky;
+    top: 0; /* Stick it to the top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Black background for the header */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    z-index: 999; /* Ensure it appears above other content */
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-items a {
+    color: #fff; /* White text color for the menu items */
+    margin: 0 10px;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.menu-items a:hover {
+    background-color: #e6e6e6;
+    color: #000; /* Black text color on hover */
+}
+
+.menu-items a.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Hamburger styles */
+.hamburger {
+    display: none; /* Initially hide hamburger */
+    flex-direction: column;
+    cursor: pointer;
+    width: 24px;
+}
+
+.hamburger div {
+    height: 3px;
+    background-color: #fff; /* White color for hamburger lines */
+    margin: 2px 0;
+    transition: 0.4s;
+}
+
+/* Mobile view styles */
+@media only screen and (max-width: 768px) {
+    .menu-items {
+        display: none; /* Hide menu items on mobile */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on mobile */
+    }
+
+    nav.open .menu-items {
+        display: flex; /* Show menu items when nav is open */
+    }
+}

@@ -1,0 +1,80 @@
+/* Contact.css */
+
+.contact-background {
+    background-color: black;
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .contact-background section {
+    background-color: black;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
+  }
+  
+  .contact-background h1, .contact-background h2 {
+    font-size: 24px;
+    color: #ccc;
+    margin-bottom: 15px;
+  }
+  
+  .contact-background p {
+    font-size: 16px;
+    color: #ccc;
+    line-height: 1.5;
+  }
+  
+  .contact-background form {
+    display: grid;
+    gap: 15px;
+  }
+  
+  .contact-background .form-group {
+    color: #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .contact-background label {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 5px;
+  }
+  
+  .contact-background input,
+  .contact-background textarea {
+    color: #ccc;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .contact-background button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-background button:hover {
+    background-color: #218838;
+  }
+  
