@@ -13,12 +13,11 @@ import {
   Admin,
   Login,
   Events,
-  Footer,
 } from "./components";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const AppContent = () => {
-  const location = useLocation();
+  // const location = useLocation();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [messages, setMessages] = useState([]);
   const auth = getAuth();
