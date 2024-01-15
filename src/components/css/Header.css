@@ -7,9 +7,9 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000; /* Black background for the header */
+    background-color: #000000; /* Black background for the header */
     padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.069);
     font-family: 'Arial', sans-serif;
     z-index: 999; /* Ensure it appears above other content */
 }
