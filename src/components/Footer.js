@@ -5,7 +5,7 @@ import "./css/Footer.css";
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>© 2023 Dan Broe Music</p>
+      <p>© 2024 Dan Broe Music</p>
       <div className="social-links-container">
         <div className="social-links-1">
           <a

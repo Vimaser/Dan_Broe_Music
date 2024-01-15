@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { getStorage, ref, listAll, getDownloadURL } from "firebase/storage";
 import { app } from "../firebase";
 /* import LazyLoad from 'react-lazyload'; */
+import Footer from "./Footer";
+import img from "../img/zhome2.gif";
 import "./css/Gallery.css";
 
 const Gallery = () => {
@@ -15,7 +17,7 @@ const Gallery = () => {
     const fetchImages = async () => {
       try {
         const storage = getStorage(app);
-        const galleryRef = ref(storage, 'gallery/');
+        const galleryRef = ref(storage, "gallery/");
         const result = await listAll(galleryRef);
 
         const galleryImageUrls = await Promise.all(
@@ -92,10 +94,14 @@ const Gallery = () => {
       </section>
       <section className="gallery-content">
         {images.map((image, index) => (
-          <figure key={index} className="gallery-item" onClick={() => {
-            setSelectedImage(image);
-            setIsModalOpen(true);
-          }}>
+          <figure
+            key={index}
+            className="gallery-item"
+            onClick={() => {
+              setSelectedImage(image);
+              setIsModalOpen(true);
+            }}
+          >
             <img
               src={image.url}
               alt={image.title || `Gallery item ${index + 1}`}
@@ -113,12 +119,24 @@ const Gallery = () => {
               src={selectedImage.url}
               alt={selectedImage.title || `Gallery item`}
             />
-            <span className="modal-close" onClick={closeModal} aria-label="Close">
+            <span
+              className="modal-close"
+              onClick={closeModal}
+              aria-label="Close"
+            >
               ×
             </span>
           </div>
         </div>
       )}
+
+      <br />
+      <section className="image-section">
+        <img src={img} alt="Dan Broe" />
+      </section>
+      <br />
+
+      <Footer />
     </div>
   );
 };

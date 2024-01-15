@@ -26,6 +26,9 @@ nav {
     padding: 8px 16px;
     border-radius: 4px;
     transition: background-color 0.3s;
+    overflow: hidden;
+    max-height: .5;
+    transition: max-height 0.3s ease-out;
 }
 
 .menu-items a:hover {
@@ -56,9 +59,12 @@ nav {
 /* Mobile view styles */
 @media only screen and (max-width: 768px) {
     .menu-items {
-        display: none; /* Hide menu items on mobile */
+        display: flex;
         flex-direction: column;
         width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
     }
 
     .hamburger {
@@ -67,5 +73,6 @@ nav {
 
     nav.open .menu-items {
         display: flex; /* Show menu items when nav is open */
+        max-height: 500px; /* Adjust max-height to fit content size */
     }
 }

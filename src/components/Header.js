@@ -25,7 +25,6 @@ const Header = ({ hasNewMessages }) => {
           <Link to="/gallery" onClick={() => setIsMenuOpen(false)}>Gallery</Link>
           <Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link>
           <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
-          <Link to="/admin" onClick={() => setIsMenuOpen(false)}></Link> {/* invisible admin link */}
         </div>
       </nav>
     </header>

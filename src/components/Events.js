@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import { app } from "../firebase";
+import Footer from "./Footer"
+import img from "../img/zhome2.gif";
 import "./css/Events.css";
 
 const Events = () => {
@@ -58,6 +60,12 @@ const Events = () => {
           <p>No upcoming events.</p>
         )}
       </section>
+      <br/>
+      <section className="image-section">
+          <img src={img} alt="Dan Broe" />
+        </section>
+      <br/>
+      <Footer/>
     </div>
   );
 };

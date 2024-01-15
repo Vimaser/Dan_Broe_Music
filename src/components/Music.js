@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { db } from "../firebase";
 import { collection, getDocs, query, orderBy } from "firebase/firestore";
+import img from "../img/zhome2.gif";
+import Footer from "./Footer"
+import img1 from "../img/zhome2.gif";
 import "./css/Music.css";
 
 const Music = () => {
@@ -56,6 +59,12 @@ const Music = () => {
           </div>
         ))}
       </div>
+      <br />
+      <section className="image-section">
+        <img src={img1} alt="Dan Broe" />
+      </section>
+      <br />
+      <Footer/>
     </div>
   );
 };
