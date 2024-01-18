@@ -9,23 +9,29 @@ function About() {
       <div className="about-container mt-5">
         <h1>Meet Dan Broe: A Life in Music</h1>
         <section className="image-section">
-        <img src={img2} alt="Dan Broe" />
-      </section>
+          <img src={img2} alt="Dan Broe" />
+        </section>
         <p>
-          Dan Broe has been a musician all his life. He was a traveling musician
-          between Seattle, Wa. and San Francisco, Ca. in his early days of
-          performing. In the late 60’s he moved to New Orleans, La. and for the
-          next 12 years he performed in hundreds of venues in the French
-          Quarter, Fat City, and the west bank of New Orleans. For several
-          years, he was the house performer at Papa Joe’s on Bourbon Street.
+          Dan Broe has been a musician all of his life. His early career was
+          spent playing at fairs, festivals, and coffee houses between Seattle,
+          Washington, and San Francisco, California. In the late '60s, he moved
+          to New Orleans, Louisiana, and for the next two years, he traveled
+          back and forth between New Orleans and Chicago, Illinois, picking up
+          performance jobs in Natchez, Mississippi, and Memphis, Tennessee along
+          the way. In the 1970s, he settled down in New Orleans and began
+          studying music at Delgado Jr. College and later at Loyola University.
+          During this period, he was a featured weekly artist at Papa Joe’s on
+          Bourbon Street and the house performer at the Steak and Ale on the New
+          Orleans west bank.
         </p>
         <p>
-          Dan studied music at Loyola University and later at Louisiana State
-          University. He was a music teacher in the East Baton Rouge Parish
-          School System for 26 years. He was featured in concert at the Shaw
-          Center and he often plays at the Jolie Pearl in downtown Baton Rouge.
-          You can catch Dan every Friday night at La Divina’s in Baton Rouge
-          performing his own original music.
+          For the next 12 years, he performed all over the New Orleans area, and
+          in 1986, he moved to Baton Rouge, Louisiana, to study music at
+          Louisiana State University. In 1992, he began a 26-year career
+          teaching Music in the East Baton Rouge Parish Public School System.
+          During this time, he has been a featured artist at the Londoner,
+          Daltons, the Shaw Center, and dozens of other venues throughout the
+          Baton Rouge area.
         </p>
       </div>
       <Footer />
