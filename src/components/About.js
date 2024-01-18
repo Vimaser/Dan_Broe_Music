@@ -33,6 +33,21 @@ function About() {
           Daltons, the Shaw Center, and dozens of other venues throughout the
           Baton Rouge area.
         </p>
+        <p>
+          Most recently, he has immersed himself in the rich songwriting
+          community of Baton Rouge. He hosts an open mic for local songwriters
+          at La Divina’s Italian Café every Friday night and has hosted several
+          singer-songwriter showcases at the Jolie Pearl in downtown Baton
+          Rouge.
+        </p>
+        <p>
+          Because of his years of performing experience, Dan is able to bring to
+          any venue an extensive library of styles and sounds. Drawing from
+          three albums worth of original music and approximately 150 cover
+          songs, he is able to craft a performance for almost any environment.
+          From Jazz to Country, Rhythm and Blues to Folk, Dan Broe can and does
+          deliver exactly what you're looking for.
+        </p>
       </div>
       <Footer />
     </>
