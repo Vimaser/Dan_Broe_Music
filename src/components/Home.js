@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/Home.css";
-import img from "../img/zhomefinal.png";
+import img from "../img/zhomefinal2.png";
 import Footer from "./Footer";
 
 function Home() {
