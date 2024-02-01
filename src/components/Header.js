@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { getAuth } from "firebase/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
 import "./css/Header.css";
 
 const Header = ({ hasNewMessages }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const auth = getAuth();
+  const [user] = useAuthState(auth);
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -11,7 +15,7 @@ const Header = ({ hasNewMessages }) => {
 
   return (
     <header>
-      {hasNewMessages && <div className="notification-bell">Messages!</div>}
+      {user && hasNewMessages && <div className="notification-bell">Messages!</div>}
       <nav className={isMenuOpen ? "open" : ""}>
         <div className="hamburger" onClick={handleMenuToggle}>
           <div></div>

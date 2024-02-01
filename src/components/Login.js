@@ -22,7 +22,7 @@ const Login = () => {
     const auth = getAuth();
     try {
       await sendPasswordResetEmail(auth, resetEmail);
-      alert("Password reset email sent!");
+      alert("Password reset email sent! Please check your junk or spam folder!");
     } catch (error) {
       console.error("Error sending password reset email:", error);
     }
