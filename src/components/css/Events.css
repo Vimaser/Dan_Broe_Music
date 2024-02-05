@@ -9,6 +9,40 @@
   align-items: center;
 }
 
+/* Styles for the section containing the events */
+.events-background section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Styles for each event article */
+.events-background article {
+  background-color: #333;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  width: calc(33% - 20px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+  .events-background article {
+    width: calc(50% - 20px);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .events-background article {
+    width: 100%;
+  }
+}
+
 /* Styles for the section containing the heading */
 .events-background h1 {
   color: #ccc;
@@ -17,27 +51,16 @@
   text-align: center;
 }
 
-/* Styles for each event article */
-.events-background article {
-  background-color: #333; /* Darker background for the box */
-  border: 2px solid #ccc; /* More pronounced border */
-  border-radius: 10px; /* Rounded corners */
-  padding: 15px; /* More padding for better spacing */
-  margin-bottom: 25px; /* More space between boxes */
-  width: 100%; /* Set a width for the boxes */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adding a shadow for depth */
-}
-
 /* Styles for the event title within each article */
 .events-background article h2 {
-  color: #fff; /* Brighter text color for contrast */
-  font-size: 16px; /* Reduced font size */
+  color: #fff;
+  font-size: 16px;
   margin-bottom: 15px;
 }
 
 /* Styles for the event date paragraph within each article */
 .events-background article p {
-  color: #ddd; /* Lighter text color for readability */
+  color: #ddd;
   margin-bottom: 10px;
 }
 
