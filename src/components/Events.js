@@ -32,9 +32,8 @@ const Events = () => {
         id: doc.id,
       }));
       eventsList.sort(
-        (a, b) =>
-          b.eventDate.toDate().getTime() - a.eventDate.toDate().getTime()
-      );
+        (a, b) => a.eventDate.toDate().getTime() - b.eventDate.toDate().getTime()
+      );      
       setEvents(eventsList);
       setIsLoading(false);
     };
