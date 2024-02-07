@@ -286,7 +286,7 @@ const Admin = () => {
     }
   };
 
-/*   const handleChangeEmail = async (newEmail) => {
+  /*   const handleChangeEmail = async (newEmail) => {
     const auth = getAuth();
     const user = auth.currentUser;
 
@@ -302,7 +302,7 @@ const Admin = () => {
     }
   }; */
 
-/*   const handleChangePassword = async (newPassword) => {
+  /*   const handleChangePassword = async (newPassword) => {
     const auth = getAuth();
     const user = auth.currentUser;
 
@@ -430,7 +430,7 @@ const Admin = () => {
         <button onClick={handleLogout}>Logout</button>
       </section>
       {/* Change Email and Password form */}
-{/*       
+      {/*       
       // This still needs work!
       <div>
       <h2>Email and Password Management:</h2>
@@ -632,10 +632,10 @@ const Admin = () => {
             </p>
             <p>Ending Time:</p>
             <p>
-                {event.eventEndingTime
-                  ? toStandardTime(event.eventEndingTime)
-                  : "Time not set"}
-              </p>
+              {event.eventEndingTime
+                ? toStandardTime(event.eventEndingTime)
+                : "Time not set"}
+            </p>
             <p>{event.location}</p>
             <button onClick={() => handleDeleteEvent(event.id)}>Delete</button>
           </div>
