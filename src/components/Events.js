@@ -62,6 +62,11 @@ const Events = () => {
                   ? toStandardTime(event.eventTime)
                   : "Time not set"}
               </p>
+              <p>
+                {event.eventEndingTime
+                  ? toStandardTime(event.eventEndingTime)
+                  : "Time not set"}
+              </p>
               <p>{event.location}</p>
             </article>
           ))

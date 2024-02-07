@@ -24,6 +24,7 @@ const Admin = () => {
   const [eventName, setEventName] = useState("");
   const [eventDate, setEventDate] = useState("");
   const [eventTime, setEventTime] = useState("");
+  const [eventEndingTime, setEventEndingTime] = useState("");
   const [location, setLocation] = useState("");
   const [events, setEvents] = useState([]);
   const [image, setImage] = useState(null);
@@ -170,6 +171,7 @@ const Admin = () => {
         eventDate: dateWithCorrectTimeZone,
         location,
         eventTime,
+        eventEndingTime,
       });
 
       // Reset form fields
@@ -177,6 +179,7 @@ const Admin = () => {
       setEventDate("");
       setLocation("");
       setEventTime("");
+      setEventEndingTime("");
 
       // Fetch events again to update the list
       fetchEvents();
@@ -585,11 +588,21 @@ const Admin = () => {
           </div>
           <div>
             <label>
-              Event Time: {/* Added input for event time */}
+              Event Starting Time: {/* Added input for event time */}
               <input
                 type="time"
                 value={eventTime}
                 onChange={(e) => setEventTime(e.target.value)}
+              />
+            </label>
+          </div>
+          <div>
+            <label>
+              Event Ending Time: {/* Added input for event time */}
+              <input
+                type="time"
+                value={eventEndingTime}
+                onChange={(e) => setEventEndingTime(e.target.value)}
               />
             </label>
           </div>
@@ -616,6 +629,11 @@ const Admin = () => {
                 ? toStandardTime(event.eventTime)
                 : "Time not set"}
             </p>
+            <p>
+                {event.eventEndingTime
+                  ? toStandardTime(event.eventEndingTime)
+                  : "Time not set"}
+              </p>
             <p>{event.location}</p>
             <button onClick={() => handleDeleteEvent(event.id)}>Delete</button>
           </div>
