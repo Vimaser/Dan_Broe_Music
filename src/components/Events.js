@@ -43,8 +43,13 @@ const Events = () => {
   }, []);
 
   if (isLoading) {
-    return  <div className="events-background"><img src={loadingGif} alt="Loading..." /><br />
-    <Footer /></div>;
+    return (
+      <div className="events-background">
+        <img src={loadingGif} alt="Loading..." />
+        <br />
+        <Footer />
+      </div>
+    );
   }
   return (
     <div className="events-background">
@@ -57,11 +62,14 @@ const Events = () => {
             <article key={event.id}>
               <h2>{event.eventName}</h2>
               <p>{event.eventDate.toDate().toLocaleDateString()}</p>
+              <p>Starting Time: </p>
               <p>
                 {event.eventTime
                   ? toStandardTime(event.eventTime)
                   : "Time not set"}
               </p>
+              <p>Ending Time:</p>
+
               <p>
                 {event.eventEndingTime
                   ? toStandardTime(event.eventEndingTime)

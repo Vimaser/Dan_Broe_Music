@@ -624,11 +624,13 @@ const Admin = () => {
           <div key={event.id}>
             <h3>{event.eventName}</h3>
             <p>{event.eventDate.toDate().toLocaleDateString()}</p>
+            <p>Starting Time: </p>
             <p>
               {event.eventTime
                 ? toStandardTime(event.eventTime)
                 : "Time not set"}
             </p>
+            <p>Ending Time:</p>
             <p>
                 {event.eventEndingTime
                   ? toStandardTime(event.eventEndingTime)
