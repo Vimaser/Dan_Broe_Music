@@ -31,9 +31,7 @@ const Events = () => {
         ...doc.data(),
         id: doc.id,
       }));
-      eventsList.sort(
-        (a, b) => a.eventDate.toDate().getTime() - b.eventDate.toDate().getTime()
-      );      
+
       setEvents(eventsList);
       setIsLoading(false);
     };
@@ -50,6 +48,29 @@ const Events = () => {
       </div>
     );
   }
+
+  const timeStyle = {
+    color: "#fff",
+    backgroundColor: "#000",
+    padding: "5px 10px",
+    borderRadius: "5px",
+    fontFamily: "Digital, Arial, sans-serif",
+    fontSize: "1.5rem",
+    display: "inline-block",
+    margin: "0 5px",
+  };
+
+  const labelStyle = {
+    color: "#fff",
+    fontWeight: "bold",
+  };
+
+  const timeContainerStyle = {
+    display: "flex",
+    alignItems: "center",
+    gap: "5px",
+  };
+
   return (
     <div className="events-background">
       <section>
@@ -60,20 +81,23 @@ const Events = () => {
           events.map((event) => (
             <article key={event.id}>
               <h2>{event.eventName}</h2>
-              <p>{event.eventDate.toDate().toLocaleDateString()}</p>
-              <p>Starting Time: </p>
-              <p>
-                {event.eventTime
-                  ? toStandardTime(event.eventTime)
-                  : "Time not set"}
-              </p>
-              <p>Ending Time:</p>
-
-              <p>
-                {event.eventEndingTime
-                  ? toStandardTime(event.eventEndingTime)
-                  : "Time not set"}
-              </p>
+              <p>{event.eventDate || "Date not set"}</p>
+              <div style={timeContainerStyle}>
+                <p style={labelStyle}>Starting Time: </p>
+                <p style={timeStyle}>
+                  {event.eventTime
+                    ? toStandardTime(event.eventTime)
+                    : "Time not set"}
+                </p>
+              </div>
+              <div style={timeContainerStyle}>
+                <p style={labelStyle}>Ending Time:</p>
+                <p style={timeStyle}>
+                  {event.eventEndingTime
+                    ? toStandardTime(event.eventEndingTime)
+                    : "Time not set"}
+                </p>
+              </div>
               <p>{event.location}</p>
             </article>
           ))
@@ -92,3 +116,4 @@ const Events = () => {
 };
 
 export default Events;
+
