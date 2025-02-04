@@ -1,7 +1,8 @@
 /* Contact.css */
 
 .contact-background {
-    background-color: black;
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 40%, rgba(20, 20, 20, 1) 100%);
+    color: #fff;
     padding: 40px;
     font-family: 'Arial', sans-serif;
     display: flex;

@@ -1,72 +1,101 @@
-/* Events.css */
-
-/* Styles for the outer container with class events-background */
+/* Events Background */
 .events-background {
-  background-color: black;
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 40%, rgba(20, 20, 20, 1) 100%);
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Events Container */
+.events-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 4px 20px rgba(255, 0, 255, 0.2);
+}
+
+/* Header Styling */
+.events-container h1 {
+  font-size: 42px;
+  color: #f8f8f8;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 10px rgba(255, 0, 255, 0.8);
+  animation: glow 1.5s infinite alternate;
+}
+
+/* Neon Glow Animation */
+@keyframes glow {
+  0% { text-shadow: 0px 0px 10px rgba(255, 0, 255, 0.8); }
+  100% { text-shadow: 0px 0px 20px rgba(255, 255, 0, 0.8); }
+}
+
+/* Event Cards */
+.event-card {
+  background: rgba(255, 255, 255, 0.1);
   padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Styles for the section containing the events */
-.events-background section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  width: 100%;
+.event-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 15px rgba(255, 255, 0, 0.8);
 }
 
-/* Styles for each event article */
-.events-background article {
-  background-color: #333;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  padding: 15px;
-  width: calc(33% - 20px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  margin-bottom: 0;
+/* Event Title */
+.event-card h2 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 8px rgba(255, 204, 0, 0.7);
 }
 
-/* Responsive adjustments for smaller screens */
-@media only screen and (max-width: 768px) {
-  .events-background article {
-    width: calc(50% - 20px);
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .events-background article {
-    width: 100%;
-  }
-}
-
-/* Styles for the section containing the heading */
-.events-background h1 {
-  color: #ccc;
-  font-size: 24px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* Styles for the event title within each article */
-.events-background article h2 {
-  color: #fff;
+/* Event Date & Time */
+.event-card p {
   font-size: 16px;
-  margin-bottom: 15px;
-}
-
-/* Styles for the event date paragraph within each article */
-.events-background article p {
-  color: #ddd;
-  margin-bottom: 10px;
-}
-
-/* Styles for the "No upcoming events" message */
-.events-background > p {
   color: #ccc;
+  margin: 5px 0;
+}
+
+/* Event Location */
+.event-card .event-location {
   font-size: 18px;
-  margin-top: 30px;
+  font-weight: bold;
+  color: #00ffcc;
+}
+
+/* Time Styling */
+.time-style {
+  color: #fff;
+  background-color: #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: "Digital", Arial, sans-serif;
+  font-size: 1.5rem;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+/* Cool Image Section */
+.image-section img {
+  width: 80%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(255, 0, 255, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-section img:hover {
+  transform: scale(1.05);
 }

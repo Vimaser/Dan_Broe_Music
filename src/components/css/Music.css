@@ -1,52 +1,52 @@
 /* Music.css */
 /* Styles for the outer container with class music-background */
-.music-background {
+/* .music-background {
     background-color: black;
     padding: 20px;
-  }
+  } */
   
   /* Styles for the inner container with class music-container */
-  .music-container {
+/*   .music-container {
     background-color: black;
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-  }
+  } */
   
   /* Styles for the section containing the heading */
-  .music-container h1 {
+/*   .music-container h1 {
     background-color: black;
     color: #ccc;
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
-  }
+  } */
   
   /* Styles for each music item with class music-item */
-  .music-item {
+/*   .music-item {
     background-color: black;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 20px;
     background-color: #fff;
-  }
+  } */
   
   /* Styles for the title within each music item */
-  .music-item h2 {
+/*   .music-item h2 {
     background-color: black;
     color: #ccc;
     font-size: 20px;
     margin-bottom: 10px;
-  }
+  } */
   
   /* Styles for the release date paragraph within each music item */
-  .music-item p {
+/*   .music-item p {
     background-color: black;
     color: #ccc;
     font-size: 14px;
     margin-bottom: 10px;
-  }
+  } */
   
   /* Styles for the iframe container within each music item */
   .music-item .iframe-container {
@@ -54,16 +54,121 @@
   }
   
   /* Styles for the "Listen Here" link within each music item */
-  .music-item a {
+/*   .music-item a {
     color: #007bff;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
-  }
+  } */
   
   /* Styles for the "Listen Here" link on hover */
-  .music-item a:hover {
+/*   .music-item a:hover {
     text-decoration: underline;
     color: #0056b3;
   }
-  
+   */
+
+/* 🎶 General Styling */
+.music-background {
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 40%, rgba(20, 20, 20, 1) 100%);
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* 🎼 Stylish Container */
+.music-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 4px 20px rgba(255, 0, 255, 0.2);
+}
+
+/* 🎧 Header Styling */
+.music-container h1 {
+  font-size: 42px;
+  color: #f8f8f8;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 10px rgba(255, 0, 255, 0.8);
+  animation: glow 1.5s infinite alternate;
+}
+
+/* ✨ Neon Glow Animation */
+@keyframes glow {
+  0% { text-shadow: 0px 0px 10px rgba(255, 0, 255, 0.8); }
+  100% { text-shadow: 0px 0px 20px rgba(255, 255, 0, 0.8); }
+}
+
+/* 🎵 Individual Music Item */
+.music-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.music-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 15px rgba(255, 255, 0, 0.8);
+}
+
+/* 🎼 Music Title */
+.music-item h2 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 8px rgba(255, 204, 0, 0.7);
+}
+
+/* 🎶 Release Date */
+.music-item p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+/* 🎸 Music Link Styling */
+.music-item a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #ff00ff, #ffcc00);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.music-item a:hover {
+  background: linear-gradient(45deg, #ffcc00, #ff00ff);
+  box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.8);
+}
+
+/* 🎵 Embed Styling */
+.iframe-container {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+/* 🎶 Cool Image Section */
+.image-section img {
+  width: 80%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(255, 0, 255, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-section img:hover {
+  transform: scale(1.05);
+}

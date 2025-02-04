@@ -1,15 +1,15 @@
-import React from "react";
-import Footer from "./Footer";
-import img2 from "../img/zhome2.gif";
-import "./css/About.css";
+import React from 'react';
+import Footer from './Footer';
+import img2 from '../img/zhome2.gif';
+import './css/About.css';
 
 function About() {
   return (
-    <>
-      <div className="about-container mt-5">
+    <div className='about-container'>
+      <div className='about-container mt-5'>
         <h1>Meet Dan Broe: A Life in Music</h1>
-        <section className="image-section">
-          <img src={img2} alt="Dan Broe" />
+        <section className='image-section'>
+          <img src={img2} alt='Dan Broe' />
         </section>
         <p>
           Dan Broe has been a musician all of his life. His early career was
@@ -50,7 +50,7 @@ function About() {
         </p>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

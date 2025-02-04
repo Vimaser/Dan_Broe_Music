@@ -3,15 +3,15 @@
 /* Default light mode styles */
 nav {
     position: sticky;
-    top: 0; /* Stick it to the top */
+    top: 0; 
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000000; /* Black background for the header */
+    background-color: #000000;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.069);
     font-family: 'Arial', sans-serif;
-    z-index: 999; /* Ensure it appears above other content */
+    z-index: 999;
 }
 
 .menu-items {
@@ -20,7 +20,7 @@ nav {
 }
 
 .menu-items a {
-    color: #fff; /* White text color for the menu items */
+    color: #fff;
     margin: 0 10px;
     text-decoration: none;
     padding: 8px 16px;
@@ -33,7 +33,7 @@ nav {
 
 .menu-items a:hover {
     background-color: #e6e6e6;
-    color: #000; /* Black text color on hover */
+    color: #000;
 }
 
 .menu-items a.active {
@@ -43,7 +43,7 @@ nav {
 
 /* Hamburger styles */
 .hamburger {
-    display: none; /* Initially hide hamburger */
+    display: none;
     flex-direction: column;
     cursor: pointer;
     width: 24px;
@@ -51,7 +51,7 @@ nav {
 
 .hamburger div {
     height: 3px;
-    background-color: #fff; /* White color for hamburger lines */
+    background-color: #fff;
     margin: 2px 0;
     transition: 0.4s;
 }
@@ -68,11 +68,11 @@ nav {
     }
 
     .hamburger {
-        display: flex; /* Show hamburger on mobile */
+        display: flex;
     }
 
     nav.open .menu-items {
-        display: flex; /* Show menu items when nav is open */
-        max-height: 500px; /* Adjust max-height to fit content size */
+        display: flex;
+        max-height: 500px;
     }
 }

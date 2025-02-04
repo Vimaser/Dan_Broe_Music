@@ -75,21 +75,33 @@ iframe {
 }
 
 
-.image-section img {
+.image-section-home img {
     max-height: 60vh; /* You can adjust this value */
     width: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Optional: for rounded corners */
 }
 
-.home-background-image {
+/* .home-background-image {
     background-image: linear-gradient(to right, black , gray); 
     background-image: url('./dad7.jpg');
-    background-size: cover; /* Adjusted to cover */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
     width: 100vw; 
+} */
+
+.home-background-image {
+    background: linear-gradient(to right, black, gray), url('./dad7.jpg');
+    background-image: url('./dad7.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: calc(100vh - 60px);
+    width: 100%;
+    padding-top: 60px; 
 }
 
 /* Larger screens */
@@ -101,7 +113,7 @@ iframe {
 }
 
 /* Smaller screens */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .home-background-image {
         background-size: cover;
         background-position: center;
@@ -111,10 +123,27 @@ iframe {
         width: 100vw; 
     }
     .image-section {
-        flex-grow: 1; /* Allows this section to grow and fill available space */
+        flex-grow: 1;
         display: flex;
         justify-content: center;
-        align-items: center; /* Center the image vertically and horizontally */
+        align-items: center;
+        padding-top: 20px;
+    }
+} */
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    .home-background-image {
+        background-attachment: scroll;
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    .image-section {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding-top: 20px;
     }
 }

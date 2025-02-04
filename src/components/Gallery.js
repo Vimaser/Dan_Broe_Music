@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getStorage, ref, listAll, getDownloadURL } from "firebase/storage";
 import { app } from "../firebase";
-/* import LazyLoad from 'react-lazyload'; */
 import Footer from "./Footer";
 import img from "../img/zhome2.gif";
 import "./css/Gallery.css";
@@ -49,75 +48,47 @@ const Gallery = () => {
     setIsModalOpen(false);
   };
 
-  useEffect(() => {
-    // Attach event listener to close the modal when clicking outside the modal
-    const handleOutsideClick = (event) => {
-      if (isModalOpen && event.target.classList.contains("modal-overlay")) {
-        closeModal();
-      }
-    };
-
-    window.addEventListener("click", handleOutsideClick);
-
-    // Cleanup event listener when the component unmounts
-    return () => {
-      window.removeEventListener("click", handleOutsideClick);
-    };
-  }, [isModalOpen]);
-
-  useEffect(() => {
-    // Attach event listener to close the modal when clicking on the image
-    const modalImage = document.querySelector(".modal-image");
-    const handleImageClick = () => {
-      closeModal();
-    };
-
-    if (modalImage) {
-      modalImage.addEventListener("click", handleImageClick);
-    }
-
-    // Cleanup event listener when the component unmounts or when the modal closes
-    return () => {
-      if (modalImage) {
-        modalImage.removeEventListener("click", handleImageClick);
-      }
-    };
-  }, [isModalOpen]);
-
-  if (loading) return <div className="gallery-container">Loading...</div>;
-  if (error) return <div className="gallery-container">{error}</div>;
-
   return (
     <div className="gallery-container">
       <section className="gallery-header">
         <h1>Gallery</h1>
       </section>
+      
       <section className="gallery-content">
-        {images.map((image, index) => (
-          <figure
-            key={index}
-            className="gallery-item"
-            onClick={() => {
-              setSelectedImage(image);
-              setIsModalOpen(true);
-            }}
-          >
-            <img
-              src={image.url}
-              alt={image.title || `Gallery item ${index + 1}`}
-              loading="lazy"
-            />
-            {image.title && <figcaption>{image.title}</figcaption>}
-          </figure>
-        ))}
+        {loading ? (
+          <div>Loading...</div>
+        ) : error ? (
+          <div className="error">{error}</div>
+        ) : images.length ? (
+          images.map((image, index) => (
+            <figure
+              key={index}
+              className="gallery-item"
+              onClick={() => {
+                setSelectedImage(image);
+                setIsModalOpen(true);
+              }}
+            >
+              <img
+                src={image.url}
+                alt={image.title || `Gallery item ${index + 1}`}
+                loading="lazy"
+              />
+              {image.title && <figcaption>{image.title}</figcaption>}
+            </figure>
+          ))
+        ) : (
+          <p>No images available.</p>
+        )}
       </section>
+
       {isModalOpen && selectedImage && (
         <div className="modal-overlay" role="dialog" aria-label="Image Modal">
           <div className="modal">
             <img
               className="modal-image"
               src={selectedImage.url}
-              alt={selectedImage.title || `Gallery item`}
+              alt={selectedImage.title || "Gallery item"}
             />
             <span
               className="modal-close"
@@ -131,7 +102,7 @@ const Gallery = () => {
       )}
 
       <br />
-      <section className="image-section">
+      <section className="image-section-gal">
         <img src={img} alt="Dan Broe" />
       </section>
       <br />

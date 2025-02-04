@@ -1,26 +1,35 @@
 .about-container {
-  background-color: black;
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 40%, rgba(20, 20, 20, 1) 100%);
+  color: #fff;
   padding: 40px;
   font-family: 'Arial', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
   gap: 20px;
-  }
-  
-  .about-container h1 {
-    background-color: black;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: lightgray;
-  }
-  
-  .about-container p {
-    background-color: black;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: lightslategray;
-  }
-  
+  width: 100%;
+  min-height: auto; /* Instead of 100vh */
+  margin: 0 auto;
+}
+
+.about-container h1 {
+  background-color: black;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: lightgray;
+}
+
+.about-container p {
+  background-color: black;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: lightslategray;
+}
+
+/* Remove unnecessary spacing issues */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}

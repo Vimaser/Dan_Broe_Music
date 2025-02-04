@@ -52,14 +52,14 @@ const Music = () => {
               />
             ) : (
               <a href={music.url} target="_blank" rel="noopener noreferrer">
-                Listen Here
+               🎧 Listen Now
               </a>
             )}
           </div>
         ))}
       </div>
       <br />
-      <section className="image-section">
+      <section className="image-section-home">
         <img src={img1} alt="Dan Broe" />
       </section>
       <br />

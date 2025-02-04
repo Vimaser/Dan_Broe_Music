@@ -8,7 +8,7 @@ function Home() {
     <div className="home-background-image">
       <div className="container mt-5">
         {/* Image Section */}
-        <section className="image-section">
+        <section className="image-section-home">
           <img src={img} alt="Dan Broe" />
         </section>
 
